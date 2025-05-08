@@ -54,8 +54,6 @@ while True:
         print("Chatbot: Goodbye! Have a great day!")
         break
     
-    try:
-        response = chain.invoke({"question": user_input})
-        print(f"Chatbot: {response}")
-    except Exception as e:
-        print(f"Chatbot: Sorry, I encountered an error. Could you try again? ({str(e)})")
+
+    response = chain.invoke({"question": user_input})
+    print(f"Chatbot: {response}")
